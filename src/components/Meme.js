@@ -9,10 +9,13 @@ export default function Meme() {
     })
     const [allMemes, setAllMemes] = React.useState([])
 
-    React.useEffect(async () => {
-        const res = await fetch("https://api.imgflip.com/get_memes")
-        const data = await res.json()
-        setAllMemes(data.data.memes)
+    React.useEffect(() => {
+        async function getMemes() {
+            const res = await fetch("https://api.imgflip.com/get_memes")
+            const data = await res.json()
+            setAllMemes(data.data.memes)
+        }
+        getMemes()
     }, [])
 
     function getMemeImage() {
@@ -25,10 +28,10 @@ export default function Meme() {
     }
 
     function handleChange(event) {
-        const {name, value} = event.target
+        const { name, value } = event.target
         setMeme(prevMeme => ({
             ...prevMeme,
-            [name] : value
+            [name]: value
         }))
     }
 
