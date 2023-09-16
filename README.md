@@ -1,4 +1,4 @@
-Creating a Meme Generator App using React.js provided an excellent opportunity to showcase my proficiency in a wide range of essential React concepts and features. In this project, I leveraged the following key skills and techniques:
+Created a Meme Generator App using React.js provided an excellent opportunity to showcase my proficiency in a wide range of essential React concepts and features. In this project, I leveraged the following key skills and techniques:
 
 1. useState: I utilized the useState hook to manage and update the application's state, allowing users to input text for the top and bottom of the meme and track the selected meme template.
 
